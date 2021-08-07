@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="2d4f0587799680830341e43f57dbf75bed93bc05a014f4373885092d2660dde2.html">Funcionalidad De Realizar Compra Con Mastercard</a></span>
+                > <span class="truncate-60"><a
+                    href="5880c4d89e4efb53abc11034e567dda6c6abe4814f81a34302c0c3e4a43562c8.html">Compra exitosa </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 07-08-2021 02:23</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Funcionalidad De Realizar Compra Con Mastercard </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como usuario deseo poder loguearme en la pagina para realizar compras de mascotas con tarjeta Mastercard
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="52a313b3d1b35f5fb5a8e8ed69203ca01fca929472119241908ddf39da0c1fc2.html">Realizar Compra Con Master Card
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Compra exitosa
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="b09eb6007a1ef1af519c5aaa5901a6a39eb6953a1414a2b7cca3fd64a04084f0.png" title=" Dado en la pagina principal del sitio PetStore" width="1920"/>
+                <img src="b09eb6007a1ef1af519c5aaa5901a6a39eb6953a1414a2b7cca3fd64a04084f0.png" title=" Javier abre la pagina principal de Pet Store" width="1920"/>
+                <img src="b09eb6007a1ef1af519c5aaa5901a6a39eb6953a1414a2b7cca3fd64a04084f0.png" title=" Javier opens the Pagina principal" width="1920"/>
+                <img src="b09eb6007a1ef1af519c5aaa5901a6a39eb6953a1414a2b7cca3fd64a04084f0.png" title=" Javier abre la pagina principal de Pet Store (completed)" width="1920"/>
+                <img src="b09eb6007a1ef1af519c5aaa5901a6a39eb6953a1414a2b7cca3fd64a04084f0.png" title=" Dado en la pagina principal del sitio PetStore (completed)" width="1920"/>
+                <img src="1440dfed7185c07abec90bc143a20d538a99c35ac32cfd2b60484eca7cc81db0.png" title=" Cuando inicio sesion con los valores &quot;testserenity&quot; y &quot;123456&quot;" width="1920"/>
+                <img src="1440dfed7185c07abec90bc143a20d538a99c35ac32cfd2b60484eca7cc81db0.png" title=" Javier iniciar sesion task" width="1920"/>
+                <img src="1440dfed7185c07abec90bc143a20d538a99c35ac32cfd2b60484eca7cc81db0.png" title=" Javier clicks on Boton para ir al formulario de iniciar sesion" width="1920"/>
+                <img src="1440dfed7185c07abec90bc143a20d538a99c35ac32cfd2b60484eca7cc81db0.png" title=" Javier enters 'testserenity' into Caja de texto para ingresar el nombre de usuario" width="1920"/>
+                <img src="ea94d391339562e1ed5ca3140472808756c5af7baa6cf36c0a0084f2ee25dbeb.png" title=" Javier enters 'testserenity' into Caja de texto para ingresar el nombre de usuario (completed)" width="1920"/>
+                <img src="ea94d391339562e1ed5ca3140472808756c5af7baa6cf36c0a0084f2ee25dbeb.png" title=" Javier enters '123456' into Caja de texto para ingresar la contrase&ntilde;a" width="1920"/>
+                <img src="1b67797f697db53ca2f53591865a3b3e5b6a26250efea9b9e4e5db5499f97260.png" title=" Javier enters '123456' into Caja de texto para ingresar la contrase&ntilde;a (completed)" width="1920"/>
+                <img src="1b67797f697db53ca2f53591865a3b3e5b6a26250efea9b9e4e5db5499f97260.png" title=" Javier clicks on Boton para iniciar sesion" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Javier clicks on Boton para iniciar sesion (completed)" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Javier iniciar sesion task (completed)" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Cuando inicio sesion con los valores &quot;testserenity&quot; y &quot;123456&quot; (completed)" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Entonces ingresa correctamente a mi usuario mostrando el mensaje &quot;Welcome&quot;" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Then El mensaje de bienvenida should be a string containing 'Welcome'" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Entonces ingresa correctamente a mi usuario mostrando el mensaje &quot;Welcome&quot; (completed)" width="1920"/>
+                <img src="eb9447ee0a5d182acaee7e5bc7f6ee177d8a5e3373d992d8781b1c62ccba5a51.png" title=" Entonces el carro de compras se encuentra vacio mostrando el mensaje &quot;Your cart is empty.&quot;" width="1920"/>
+                <img src="eb9447ee0a5d182acaee7e5bc7f6ee177d8a5e3373d992d8781b1c62ccba5a51.png" title=" Javier verificar carro vacio task" width="1920"/>
+                <img src="eb9447ee0a5d182acaee7e5bc7f6ee177d8a5e3373d992d8781b1c62ccba5a51.png" title=" Javier clicks on Boton para ir al carro" width="1920"/>
+                <img src="eb9447ee0a5d182acaee7e5bc7f6ee177d8a5e3373d992d8781b1c62ccba5a51.png" title=" Javier verificar carro vacio task (completed)" width="1920"/>
+                <img src="eb9447ee0a5d182acaee7e5bc7f6ee177d8a5e3373d992d8781b1c62ccba5a51.png" title=" Then El mensaje de carro vacio should be a string containing 'Your cart is empty.'" width="1920"/>
+                <img src="eb9447ee0a5d182acaee7e5bc7f6ee177d8a5e3373d992d8781b1c62ccba5a51.png" title=" Then El mensaje de carro vacio should be a string containing 'Your cart is empty.' (completed)" width="1920"/>
+                <img src="eb9447ee0a5d182acaee7e5bc7f6ee177d8a5e3373d992d8781b1c62ccba5a51.png" title=" Entonces el carro de compras se encuentra vacio mostrando el mensaje &quot;Your cart is empty.&quot; (completed)" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Dado en la pagina principal del sitio PetStore" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Javier abre la pagina principal de Pet Store" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Javier opens the Pagina principal" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Javier abre la pagina principal de Pet Store (completed)" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Dado en la pagina principal del sitio PetStore (completed)" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Cuando realizo una nueva busqueda con el valor &quot;Fish&quot;" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Javier abre la pagina principal de Pet Store" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Javier opens the Pagina principal" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Javier abre la pagina principal de Pet Store (completed)" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Then El boton search habilitado" width="1920"/>
+                <img src="12bf63b2bcf6d801be5c6828e3d69912724330bd904097ef4d20c4edd400504c.png" title=" Then El textbox se encuentra vacio should be a string containing ''" width="1920"/>
+                <img src="d86d8f69aef1336522d1d396c38584257b65b14058ab9943cdc30885ab1e8265.png" title=" Javier hacer busqueda task" width="1920"/>
+                <img src="d86d8f69aef1336522d1d396c38584257b65b14058ab9943cdc30885ab1e8265.png" title=" Javier clicks on Textbox para ingresar el tipo de mascota" width="1920"/>
+                <img src="d86d8f69aef1336522d1d396c38584257b65b14058ab9943cdc30885ab1e8265.png" title=" Javier enters 'Fish' into Textbox para ingresar el tipo de mascota" width="1920"/>
+                <img src="88c24fb35f8f01c594fe545db8660a7ae62b357b64dae919fc7f7ce7449a4c2a.png" title=" Javier enters 'Fish' into Textbox para ingresar el tipo de mascota (completed)" width="1920"/>
+                <img src="88c24fb35f8f01c594fe545db8660a7ae62b357b64dae919fc7f7ce7449a4c2a.png" title=" Javier clicks on Boton para hacer busqueda de mascotas" width="1920"/>
+                <img src="d17605acda73aac3382fd0aff8528fca19fa056a32937294a7de56e28ffdfe69.png" title=" Javier clicks on Boton para hacer busqueda de mascotas (completed)" width="1920"/>
+                <img src="d17605acda73aac3382fd0aff8528fca19fa056a32937294a7de56e28ffdfe69.png" title=" Javier hacer busqueda task (completed)" width="1920"/>
+                <img src="d17605acda73aac3382fd0aff8528fca19fa056a32937294a7de56e28ffdfe69.png" title=" Cuando realizo una nueva busqueda con el valor &quot;Fish&quot; (completed)" width="1920"/>
+                <img src="d17605acda73aac3382fd0aff8528fca19fa056a32937294a7de56e28ffdfe69.png" title=" Entonces se visualiza una tabla con los resultados de la busqueda" width="1920"/>
+                <img src="d17605acda73aac3382fd0aff8528fca19fa056a32937294a7de56e28ffdfe69.png" title=" Then La tabla con los resultados de la busqueda" width="1920"/>
+                <img src="d17605acda73aac3382fd0aff8528fca19fa056a32937294a7de56e28ffdfe69.png" title=" Entonces se visualiza una tabla con los resultados de la busqueda (completed)" width="1920"/>
+                <img src="adabff84540dd430092b4523447c55bc7fc9cfa0c13cad5a0b3adeb125b1130c.png" title=" Cuando hago click en el bot&oacute;n mascota" width="1920"/>
+                <img src="adabff84540dd430092b4523447c55bc7fc9cfa0c13cad5a0b3adeb125b1130c.png" title=" Javier hacer click en fish chino task" width="1920"/>
+                <img src="adabff84540dd430092b4523447c55bc7fc9cfa0c13cad5a0b3adeb125b1130c.png" title=" Javier clicks on Boton de mascota &ldquo;Fresh Water fish from China" width="1920"/>
+                <img src="adabff84540dd430092b4523447c55bc7fc9cfa0c13cad5a0b3adeb125b1130c.png" title=" Javier hacer click en fish chino task (completed)" width="1920"/>
+                <img src="adabff84540dd430092b4523447c55bc7fc9cfa0c13cad5a0b3adeb125b1130c.png" title=" Cuando hago click en el bot&oacute;n mascota (completed)" width="1920"/>
+                <img src="adabff84540dd430092b4523447c55bc7fc9cfa0c13cad5a0b3adeb125b1130c.png" title=" Entonces se visualiza el texto &quot;Goldfish&quot;" width="1920"/>
+                <img src="adabff84540dd430092b4523447c55bc7fc9cfa0c13cad5a0b3adeb125b1130c.png" title=" Then El mensaje GoldFish should be a string containing 'Goldfish'" width="1920"/>
+                <img src="adabff84540dd430092b4523447c55bc7fc9cfa0c13cad5a0b3adeb125b1130c.png" title=" Entonces se visualiza el texto &quot;Goldfish&quot; (completed)" width="1920"/>
+                <img src="326ab0289291778035da7424c8102aed4c55fa176571f18308e9db064962eb4e.png" title=" Cuando hago click en el bot&oacute;n Add to Cart del item ID EST" width="1920"/>
+                <img src="326ab0289291778035da7424c8102aed4c55fa176571f18308e9db064962eb4e.png" title=" Javier hacer click en add to cart item est21 task" width="1920"/>
+                <img src="326ab0289291778035da7424c8102aed4c55fa176571f18308e9db064962eb4e.png" title=" Javier clicks on boton de mascota Add To Cart del item &ldquo;EST-21&rdquo;" width="1920"/>
+                <img src="326ab0289291778035da7424c8102aed4c55fa176571f18308e9db064962eb4e.png" title=" Javier hacer click en add to cart item est21 task (completed)" width="1920"/>
+                <img src="326ab0289291778035da7424c8102aed4c55fa176571f18308e9db064962eb4e.png" title=" Cuando hago click en el bot&oacute;n Add to Cart del item ID EST (completed)" width="1920"/>
+                <img src="326ab0289291778035da7424c8102aed4c55fa176571f18308e9db064962eb4e.png" title=" Entonces se visualiza que contiene un &quot;Sub Total: $5.29 &quot;" width="1920"/>
+                <img src="326ab0289291778035da7424c8102aed4c55fa176571f18308e9db064962eb4e.png" title=" Then El mensaje subtotal de 5.29 should be a string containing 'Sub Total: $5.29 '" width="1920"/>
+                <img src="326ab0289291778035da7424c8102aed4c55fa176571f18308e9db064962eb4e.png" title=" Entonces se visualiza que contiene un &quot;Sub Total: $5.29 &quot; (completed)" width="1920"/>
+                <img src="951c9ce45801c84bc8b52a66083c61dc10ce734c6d09ddfaa7146d02a5eb0008.png" title=" Cuando al hacer click en el bot&oacute;n Proceed to Checkout" width="1920"/>
+                <img src="951c9ce45801c84bc8b52a66083c61dc10ce734c6d09ddfaa7146d02a5eb0008.png" title=" Javier hacer click en checkout task" width="1920"/>
+                <img src="951c9ce45801c84bc8b52a66083c61dc10ce734c6d09ddfaa7146d02a5eb0008.png" title=" Javier clicks on Boton para iniciar compra" width="1920"/>
+                <img src="951c9ce45801c84bc8b52a66083c61dc10ce734c6d09ddfaa7146d02a5eb0008.png" title=" Javier hacer click en checkout task (completed)" width="1920"/>
+                <img src="951c9ce45801c84bc8b52a66083c61dc10ce734c6d09ddfaa7146d02a5eb0008.png" title=" Cuando al hacer click en el bot&oacute;n Proceed to Checkout (completed)" width="1920"/>
+                <img src="951c9ce45801c84bc8b52a66083c61dc10ce734c6d09ddfaa7146d02a5eb0008.png" title=" Entonces se visualiza en la pantalla &quot;Payment Details&quot; y &quot;Billing Address&quot;" width="1920"/>
+                <img src="951c9ce45801c84bc8b52a66083c61dc10ce734c6d09ddfaa7146d02a5eb0008.png" title=" Then la pantalla de pago con Payment Details" width="1920"/>
+                <img src="951c9ce45801c84bc8b52a66083c61dc10ce734c6d09ddfaa7146d02a5eb0008.png" title=" Then la pantalla de pago con Billing Address" width="1920"/>
+                <img src="951c9ce45801c84bc8b52a66083c61dc10ce734c6d09ddfaa7146d02a5eb0008.png" title=" Entonces se visualiza en la pantalla &quot;Payment Details&quot; y &quot;Billing Address&quot; (completed)" width="1920"/>
+                <img src="899b9793b16ac3e8500503be53353ffcb3acd8094f96c1f29b23d017f216df24.png" title=" Cuando selecciono Tipo_Tarjeta en el Combo Box Card Type" width="1920"/>
+                <img src="899b9793b16ac3e8500503be53353ffcb3acd8094f96c1f29b23d017f216df24.png" title=" Javier seleccionar tipo tarjeta task" width="1920"/>
+                <img src="899b9793b16ac3e8500503be53353ffcb3acd8094f96c1f29b23d017f216df24.png" title=" Javier seleciona MasterCard en COMBOBOX para seleccionar tipo de tarjeta" width="1920"/>
+                <img src="899b9793b16ac3e8500503be53353ffcb3acd8094f96c1f29b23d017f216df24.png" title=" Javier seleccionar tipo tarjeta task (completed)" width="1920"/>
+                <img src="899b9793b16ac3e8500503be53353ffcb3acd8094f96c1f29b23d017f216df24.png" title=" Cuando selecciono Tipo_Tarjeta en el Combo Box Card Type (completed)" width="1920"/>
+                <img src="dade85174769283965508743cd6da4d091964f5b19de3e30262d61453d990f19.png" title=" Cuando ingreso el valor &quot;5151741914248443&quot; en el textbox Card Number y hago Click en el bot&oacute;n Continue" width="1920"/>
+                <img src="dade85174769283965508743cd6da4d091964f5b19de3e30262d61453d990f19.png" title=" Javier escribir nro tarjeta credito task" width="1920"/>
+                <img src="dade85174769283965508743cd6da4d091964f5b19de3e30262d61453d990f19.png" title=" Javier enters '5151741914248443' into textbox de numero de tarjeta de credito" width="1920"/>
+                <img src="dade85174769283965508743cd6da4d091964f5b19de3e30262d61453d990f19.png" title=" Javier clicks on boton CONTINUE" width="1920"/>
+                <img src="d5aa3ecd1e4bea5be4f384f8e0598080a3ec2f5c21bad7b76eb0b1aa921a35e8.png" title=" Javier clicks on boton CONTINUE (completed)" width="1920"/>
+                <img src="d5aa3ecd1e4bea5be4f384f8e0598080a3ec2f5c21bad7b76eb0b1aa921a35e8.png" title=" Javier escribir nro tarjeta credito task (completed)" width="1920"/>
+                <img src="d5aa3ecd1e4bea5be4f384f8e0598080a3ec2f5c21bad7b76eb0b1aa921a35e8.png" title=" Cuando ingreso el valor &quot;5151741914248443&quot; en el textbox Card Number y hago Click en el bot&oacute;n Continue (completed)" width="1920"/>
+                <img src="d5aa3ecd1e4bea5be4f384f8e0598080a3ec2f5c21bad7b76eb0b1aa921a35e8.png" title=" Entonces se verifica que el mensaje contenga la frase &quot;Please confirm the information&quot;" width="1920"/>
+                <img src="d5aa3ecd1e4bea5be4f384f8e0598080a3ec2f5c21bad7b76eb0b1aa921a35e8.png" title=" Then El mensaje Please confirm de information should be a string containing 'Please confirm the information'" width="1920"/>
+                <img src="d5aa3ecd1e4bea5be4f384f8e0598080a3ec2f5c21bad7b76eb0b1aa921a35e8.png" title=" Entonces se verifica que el mensaje contenga la frase &quot;Please confirm the information&quot; (completed)" width="1920"/>
+                <img src="7be4ddd713a8f343295f4abd9227fa172c873a3abfe5485cdcccafd1d3718131.png" title=" Cuando al hacer Click en Confirm" width="1920"/>
+                <img src="7be4ddd713a8f343295f4abd9227fa172c873a3abfe5485cdcccafd1d3718131.png" title=" Javier hacer click en confirm task" width="1920"/>
+                <img src="7be4ddd713a8f343295f4abd9227fa172c873a3abfe5485cdcccafd1d3718131.png" title=" Javier clicks on boton CONFIRM" width="1920"/>
+                <img src="7be4ddd713a8f343295f4abd9227fa172c873a3abfe5485cdcccafd1d3718131.png" title=" Javier hacer click en confirm task (completed)" width="1920"/>
+                <img src="7be4ddd713a8f343295f4abd9227fa172c873a3abfe5485cdcccafd1d3718131.png" title=" Cuando al hacer Click en Confirm (completed)" width="1920"/>
+                <img src="7be4ddd713a8f343295f4abd9227fa172c873a3abfe5485cdcccafd1d3718131.png" title=" Entonces se visualiza el mensaje de Thank you" width="1920"/>
+                <img src="7be4ddd713a8f343295f4abd9227fa172c873a3abfe5485cdcccafd1d3718131.png" title=" Then el mensaje than you" width="1920"/>
+                <img src="7be4ddd713a8f343295f4abd9227fa172c873a3abfe5485cdcccafd1d3718131.png" title=" Entonces se visualiza el mensaje de Thank you (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.7</span>
+</div>
+</body>
+</html>

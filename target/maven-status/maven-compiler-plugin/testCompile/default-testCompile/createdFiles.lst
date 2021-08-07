@@ -1,0 +1,4 @@
+definicionpasos\HacerBusquedaSteps.class
+definicionpasos\InciarSesionConCredencialesIncorrectasSteps.class
+definicionpasos\RealizarCompraConMasterCardSteps.class
+TestRunner.class
